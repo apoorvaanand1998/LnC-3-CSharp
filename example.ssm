@@ -1,0 +1,43 @@
+	LINK 13
+	Bsr main
+	UNLINK
+	HALT
+main:
+	LDC 3
+	LDS 0
+	STL 2
+	AJS -1
+	Bsr printSquare
+	LDR RR
+	AJS -1
+	LDC 4
+	LDS 0
+	STL 4
+	AJS -1
+	LDC 5
+	LDS 0
+	STL 3
+	AJS -1
+	Bsr printAdd
+	LDR RR
+	AJS -1
+	RET
+printSquare:
+	LDL 2
+	LDL 2
+	MUL
+	LDS 0
+	LDLA 5
+	STA 0
+	AJS -1
+	RET
+printAdd:
+	LDL 4
+	LDL 3
+	ADD
+	LDS 0
+	LDLA 5
+	STA 0
+	AJS -1
+	RET
+	UNLINK

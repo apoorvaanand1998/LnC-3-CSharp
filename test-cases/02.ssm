@@ -1,0 +1,19 @@
+	LINK 5
+	Bsr main
+	UNLINK
+	HALT
+main:
+	LDC 3
+	LDC 5
+	MUL
+	LDC 2
+	ADD
+	AJS -1
+	LDC 3
+	LDC 2
+	ADD
+	LDC 1
+	EQ
+	AJS -1
+	RET
+	UNLINK
